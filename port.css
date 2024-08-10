@@ -5,6 +5,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Mulish';
+    cursor: pointer;
     
 }
 .banner
@@ -265,14 +266,28 @@ section::before
     
 }
 
-.cursor
-{
+.cursor {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
     position: fixed;
+    mix-blend-mode: difference;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+}
+.cursor {
     width: 20px;
     height: 20px;
+    background-color: #6198ff;
     border-radius: 50%;
-    background: #618dde;
-    transition: 0.1s;
-    transform: translate(-50%,-50%) ;
+    position: fixed;
+    mix-blend-mode: difference;
+    left: 0;
+    top: 0;
     pointer-events: none;
+    transform: translate(-50%,-50%);
 }
+

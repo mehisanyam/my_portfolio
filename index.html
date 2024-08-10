@@ -4,18 +4,18 @@
 <meta name="viewport" content="width=device-width, initial-scale-1.0">
 <title>ANIMATED PORTFOLIO WEBSITE</title>
 <link rel="stylesheet" type="text/css" href="port.css">
+
 </head>
 <body>
-   <section class="banner">
+    <section class="banner">
         <header>
             <a href="#" class="logo"><span>Sanyam</span>.</a>
             <ul>
-                <li><a href="#">HOME.</a></li>
-                <li><a href="#">ABOUT.</a></li>
-                <li><a href="#">CONTACT.</a></li>
+                <li><a href="#" >HOME.</a></li>
+                <li><a href="#" >ABOUT.</a></li>
+                <li><a href="#" >CONTACT.</a></li>
             </ul>
        </header>
-       
        <div class="content">
            <h3>HELLO</h3> 
            <h2>I am_<span>Sanyam </span></h2>
@@ -27,7 +27,7 @@
        </div>
        <img src="s.png" class ="myself">
        <ul class="sci">
-            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="#" ><ion-icon name="logo-linkedin"></ion-icon></a></li>
             <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
             <li><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
        </ul>
@@ -35,6 +35,15 @@
         <ion-icon name="sunny-outline"></ion-icon>
         <ion-icon name="moon-outline"></ion-icon>
        </div> -->
+       <div class="cursor"></div>
+       <div class="cursor2"></div>
+       <script>
+            var cursor = document.querySe1ector(".cursor");
+            var cursor2 = document.querySe1ector(".cursor2");
+            document. addEventListener( "mousemove" , function(e){
+                cursor.style.cssText=cursor2.style.cssText = "left: " + e.c1ientX + "px; top: " + e.clientY + "px;";
+            });
+       </script>
     </section>
    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -61,13 +70,39 @@
             banner.classList.toggle('night')
         }  
     </script>
-
     <script>
-        const cursor=document.querySeIector('.cursor') ;
-        document.addEventListener('mousemove' , (e) => {
-            cursor. style. left = e.pageX + 'px';
-            cursor. style. top = e.pageY + 'px';
-        })
-    </script>
+
+        (function () {
+        
+              const link = document.querySelectorAll('nav > .hover-this');
+              const cursor = document.querySelector('.cursor');
+        
+              const animateit = function (e) {
+                    const span = this.querySelector('span');
+                    const { offsetX: x, offsetY: y } = e,
+                    { offsetWidth: width, offsetHeight: height } = this,
+        
+                    move = 25,
+                    xMove = x / width * (move * 2) - move,
+                    yMove = y / height * (move * 2) - move;
+        
+                    span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        
+                    if (e.type === 'mouseleave') span.style.transform = '';
+              };
+        
+              const editCursor = e => {
+                    const { clientX: x, clientY: y } = e;
+                    cursor.style.left = x + 'px';
+                    cursor.style.top = y + 'px';
+              };
+        
+              link.forEach(b => b.addEventListener('mousemove', animateit));
+              link.forEach(b => b.addEventListener('mouseleave', animateit));
+              window.addEventListener('mousemove', editCursor);
+        
+        })();
+        
+        </script>
 </body>
 </html>

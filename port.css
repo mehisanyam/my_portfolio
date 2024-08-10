@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Sankofa+Display&display=swap');
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Mulish';
+    
+}
+.banner
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 140px;
+    background: #112D4E;
+    transition: 0.5s;
+}
+.banner.night
+{
+    background: #112D4E;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(100px);
+}
+header .logo
+{
+    color: #a3a4aca5;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;  
+}
+
+header span
+{
+    color: #DBE2EF;
+}
+
+header ul
+{
+  display: flex;
+    column-gap: 40px;
+}
+
+header ul li
+{
+    list-style: none;
+}
+
+header ul li a
+{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #e3e3e3;
+    transition: 0.5s;  
+}
+header ul li a:hover
+{
+    color: #618dde;
+    z-index: 10000;
+    backdrop-filter: blur(100px);
+}
+.content
+{
+    position:  relative;
+    max-width: 700px;
+    z-index: 10;
+}
+
+.content h3
+{
+   font-size: 2em;
+    color: #618dde;
+    font-weight: 500;
+    transition: 0.5s;
+    margin-bottom: 10px;
+    
+}
+.content h2
+{
+   font-size: 5.5em;
+    color:#DBE2EF;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.content h2 span
+{
+ color: #618dde;
+}
+.content p
+{
+    font-size: 20px;
+    color: #DBE2EF;
+    margin: 50px 0;
+    font-weight: 600;
+    transition: 1s;
+}
+.content button
+{
+    position: relative;
+    background: #0F4C75;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+.content button:hover
+{
+    color: #85a9e9;
+    
+}
+.content button.chat
+{   background: transparent;
+    border-bottom-style: solid;
+    border-bottom-color: #0F4C75;
+    color: rgb(154, 193, 225);
+}
+.content button.chat:hover
+{
+    color: #618dde;
+    z-index: 10;
+    backdrop-filter: blur(100px);
+}
+.content button.chat ion-icon
+{
+    position: relative;
+    top: 5px;
+    color: rgb(145, 187, 235);
+    font-size: 1.3em;
+}
+.sci
+{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    column-gap: 40px;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    text-decoration: none;
+    font-size: 1.75em;
+    color: #DBE2EF;
+}
+.sci li a:hover
+{
+  color: #618dde;
+}
+.daynight
+{
+   position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 2em;
+}
+.banner.night .daylight
+{
+    background: #240063;
+    color: rgb(245, 245, 245);
+}
+.daynight ion-icon:nth-child(2),
+.banner.night .daynight ion-icon:nth-child(1)
+{
+    display: none; 
+}
+.banner.night .daynight ion-icon:nth-child(2)
+{
+    display: block;
+}
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night .sci li a,
+.banner.night header ul li a
+{
+    color: rgb(255, 255, 255);
+}
+.banner.night .content h3
+{
+    color: rgb(255, 255, 255);
+}
+.banner.night .sci li a:hover
+{
+    color: rgb(22, 4, 113);
+}
+section::before
+{
+    content: "";
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+    transform: translateY(-8%);
+    width: 500px;
+    height: 500px;
+    background: #0a54dd;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #1B262C,
+    0 0 50px #079cff,
+    0 0 15px #BBE1FA;
+    animation: animateColor 10s linear infinite;
+    transition-delay: -5s;
+   
+}
+@keyframes animateColor
+{
+    0%,100%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(50px);
+    }
+     
+}
+
+.myself
+{
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    max-height: 100vh;
+    zoom: 150%;
+}
+.myself:hover
+{
+    zoom: 153%;
+    
+}
+
+.cursor
+{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #618dde;
+    transition: 0.1s;
+    transform: translate(-50%,-50%) ;
+    pointer-events: none;
+}

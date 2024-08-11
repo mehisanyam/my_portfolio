@@ -259,11 +259,14 @@ section::before
     bottom: 0;
     max-height: 100vh;
     zoom: 150%;
+    cursor:none;
+
 }
 .myself:hover
 {
     zoom: 153%;
-    
+    cursor:none;
+    transition:2s;
 }
 
 .cursor {

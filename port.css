@@ -260,7 +260,7 @@ section::before
     max-height: 100vh;
     zoom: 150%;
     cursor:none;
-
+    mix-blend-mode: normal;
 }
 .myself:hover
 {
@@ -269,6 +269,7 @@ section::before
     transition: transform 0.2s;
     transform: scale(1.0);
     transition-timing-function: ease-in-out;
+    mix-blend-mode: normal;
 }
 
 .cursor {

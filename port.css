@@ -266,7 +266,9 @@ section::before
 {
     zoom: 153%;
     cursor:none;
-    transition:2s;
+    transition: transform 0.2s;
+    transform: scale(1.0);
+    transition-timing-function: ease-in-out;
 }
 
 .cursor {
@@ -282,8 +284,8 @@ section::before
     transform: translate(-50%,-50%);
 }
 .cursor{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: #6198ff;
     border-radius: 50%;
     position: fixed;

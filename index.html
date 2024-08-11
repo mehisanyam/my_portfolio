@@ -23,13 +23,22 @@
            <h2><span id="text1"></span></h2>
            <p>As a Mechanical Engineering student at NIT DURGAPUR, I'm eager to apply my technical skills and knowledge to develop innovative engineering solutions. I aim to work in an environment that fosters growth and offers challenging projects. Leveraging my expertise in content writing, programming, and data analysis, along with experience in resource management and event coordination, I aim to contribute effectively.</p>
            <button>HIRE ME</button>
-           <button class="chat"><ion-icon name="document-text-outline"></ion-icon> Download CV</button>
+           <button class="chat" onclick="downloadFile()"><ion-icon name="document-text-outline"></ion-icon> Download CV</button>
+           <script>
+                function downloadFile() {
+                    const link = document.createElement('a');
+                    link.href = 'C:\portfolio\s.png'; // Replace with your file path
+                    link.download = 'downloaded_file.txt'; // Set desired download name
+                    link.click();
+                }
+            </script>
+           
        </div>
        <img src="s.png" class ="myself">
        <ul class="sci">
-            <li><a href="#" ><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
-            <li><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/in/sanyam-gupta-7b7624258/" ><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://github.com/mehisanyam"><ion-icon name="logo-github"></ion-icon></a></li>
+            <li><a href="mehi.sanyam@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
        </ul>
        <!-- <div class="daynight">
         <ion-icon name="sunny-outline"></ion-icon>
